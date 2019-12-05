@@ -1,0 +1,34 @@
+"*":
+  core:
+    automaticallyUpdate: false
+    disabledPackages: [
+      "tool-bar"
+    ]
+    openEmptyEditorOnStart: false
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "alpenglow-twilight-atom-syntax"
+    ]
+  editor:
+    fontSize: 13
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "c78815fb-e6ff-45b0-a788-3267adfb75c4"
+  "linter-ui-default":
+    panelHeight: 300
+  "markdown-preview":
+    breakOnSingleNewline: true
+    useGitHubStyle: true
+  "platformio-ide-terminal":
+    style:
+      defaultPanelHeight: "120px"
+  rspec:
+    command: "bundle exec rspec"
+  "terminal-plus":
+    style:
+      defaultPanelHeight: "200px"
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
