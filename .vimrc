@@ -1,7 +1,7 @@
 syntax enable
 set number
-set foldmethod=syntax
-set foldlevel=99
+" set foldmethod=syntax
+" set foldlevel=99
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 autocmd QuickFixCmdPost *grep* cwindow
 call plug#begin()
@@ -19,6 +19,15 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'janko/vim-test'
+Plug 'terryma/vim-multiple-cursors'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
 call plug#end()
 colorscheme twilight
 nmap <Leader>n :TestNearest<CR>
