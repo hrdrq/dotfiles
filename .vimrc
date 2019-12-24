@@ -18,7 +18,22 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tomtom/tcomment_vim'
+Plug 'kchmck/vim-coffee-script'
 Plug 'janko/vim-test'
+Plug 'tpope/vim-endwise'
+Plug 'scrooloose/syntastic'
+let g:syntastic_mode_map = { 'mode': 'active' }
+let g:syntastic_ruby_checkers = ['rubocop']
+" インデントに色を付けて見やすくする
+Plug 'nathanaelkane/vim-indent-guides'
+" vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
+let g:indent_guides_enable_on_vim_startup = 1
+" TABキーを押した際にタブ文字の代わりにスペースを入れる
+set expandtab
+" タブ文字の表示幅
+set tabstop=2
+" Vimが挿入するインデントの幅
+set shiftwidth=2
 Plug 'terryma/vim-multiple-cursors'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -28,6 +43,8 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
+Plug 'mattn/emmet-vim'
+let g:user_emmet_leader_key='<c-t>'
 call plug#end()
 colorscheme twilight
 nmap <Leader>n :TestNearest<CR>
