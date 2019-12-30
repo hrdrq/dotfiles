@@ -15,6 +15,11 @@ Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+" For nerd-fonts:
+"   brew tap homebrew/cask-fonts
+"   brew cask install font-hack-nerd-font
+Plug 'ryanoasis/nerd-fonts'
+set guifont=Hack\ Regular\ Nerd\ Font\ Complete:h12 
 Plug 'jiangmiao/auto-pairs'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tomtom/tcomment_vim'
