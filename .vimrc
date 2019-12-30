@@ -52,7 +52,11 @@ let g:deoplete#enable_at_startup = 1
 Plug 'mattn/emmet-vim'
 let g:user_emmet_leader_key='<c-t>'
 call plug#end()
-colorscheme twilight
+if has("gui_running")
+  colorscheme twilight
+else
+  colorscheme twilight256 
+endif
 nmap <Leader>n :TestNearest<CR>
 nmap <Leader>f :TestFile<CR>
 nmap <Leader>s :TestSuite<CR>
