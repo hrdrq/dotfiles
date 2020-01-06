@@ -3,6 +3,7 @@ set number
 " set foldmethod=syntax
 " set foldlevel=99
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+:nnoremap <C-A> :!make<CR>
 autocmd QuickFixCmdPost *grep* cwindow
 call plug#begin()
 Plug 'Shougo/unite.vim'
