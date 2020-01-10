@@ -31,6 +31,7 @@ Plug 'scrooloose/syntastic'
 let g:syntastic_mode_map = { 'mode': 'active' }
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+let g:syntastic_python_checkers=['flake8']
 " インデントに色を付けて見やすくする
 Plug 'nathanaelkane/vim-indent-guides'
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
