@@ -3,14 +3,23 @@ set number
 " set foldmethod=syntax
 " set foldlevel=99
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-" for atcoder start
-" :let acq="b"
-" let acq = 'b'
-" :nnoremap <C-A> :!make "Q=".acq<CR>
-let acq = 'a'
-:nnoremap <C-A> :!make Q=<C-r>=acq<CR><CR>
 
+" for atcoder start
+:command! -nargs=1 AC call Set_ac_env(<f-args>)
+function! Set_ac_env(quiz)
+  let g:acq = a:quiz
+  echo "Set_ac_env: " . g:acq
+  tabclose
+  tabnew
+  set splitright
+  execute 'edit' g:acq . "/input.txt"
+  execute 'vsp' g:acq . "/main.cpp"
+  vertical resize +60
+  cal cursor(22, 2)
+endfunction
+:nnoremap <C-A> :!make Q=<C-r>=g:acq<CR><CR>
 " for atcoder end
+
 autocmd QuickFixCmdPost *grep* cwindow
 call plug#begin()
 Plug 'Shougo/unite.vim'
