@@ -3,7 +3,14 @@ set number
 " set foldmethod=syntax
 " set foldlevel=99
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-:nnoremap <C-A> :!make<CR>
+" for atcoder start
+" :let acq="b"
+" let acq = 'b'
+" :nnoremap <C-A> :!make "Q=".acq<CR>
+let acq = 'a'
+:nnoremap <C-A> :!make Q=<C-r>=acq<CR><CR>
+
+" for atcoder end
 autocmd QuickFixCmdPost *grep* cwindow
 call plug#begin()
 Plug 'Shougo/unite.vim'
