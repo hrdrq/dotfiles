@@ -17,7 +17,7 @@ function! Set_ac_env(quiz)
   vertical resize +60
   cal cursor(22, 2)
 endfunction
-:nnoremap <C-A> :!make Q=<C-r>=g:acq<CR><CR>
+:nnoremap <C-Q> :!make Q=<C-r>=g:acq<CR><CR>
 " for atcoder end
 
 autocmd QuickFixCmdPost *grep* cwindow
@@ -59,7 +59,6 @@ set expandtab
 set tabstop=2
 " Vimが挿入するインデントの幅
 set shiftwidth=2
-Plug 'terryma/vim-multiple-cursors'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
