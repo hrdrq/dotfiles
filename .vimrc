@@ -15,7 +15,7 @@ function! Set_ac_env(quiz)
   execute 'edit' g:acq . "/input.txt"
   execute 'vsp' g:acq . "/main.cpp"
   vertical resize +60
-  cal cursor(22, 2)
+  cal cursor(21, 2)
 endfunction
 :nnoremap <C-Q> :!make Q=<C-r>=g:acq<CR><CR>
 " for atcoder end
