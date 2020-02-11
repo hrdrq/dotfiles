@@ -70,6 +70,7 @@ endif
 let g:deoplete#enable_at_startup = 1
 Plug 'mattn/emmet-vim'
 let g:user_emmet_leader_key='<c-t>'
+Plug 'posva/vim-vue'
 call plug#end()
 if has("gui_running")
   colorscheme twilight
