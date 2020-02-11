@@ -12,10 +12,11 @@ function! Set_ac_env(quiz)
   tabclose
   tabnew
   set splitright
-  execute 'edit' g:acq . "/input.txt"
-  execute 'vsp' g:acq . "/main.cpp"
+  execute 'edit' "input/" . g:acq . ".txt"
+  execute 'vsp' g:acq . ".cpp"
   vertical resize +60
-  cal cursor(21, 2)
+  cal cursor(65, 2)
+  normal zz
 endfunction
 :nnoremap <C-Q> :!make Q=<C-r>=g:acq<CR><CR>
 " for atcoder end
