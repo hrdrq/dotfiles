@@ -11,11 +11,16 @@ function! Set_ac_env(quiz)
   echo "Set_ac_env: " . g:acq
   tabclose
   tabnew
-  set splitright
-  execute 'edit' "input/" . g:acq . ".txt"
-  execute 'vsp' g:acq . ".cpp"
-  vertical resize +60
-  cal cursor(65, 2)
+  set nosplitright
+  execute 'edit' g:acq . ".cpp"
+  execute 'vsplit' "input/". g:acq . "/5.txt"
+  execute 'split' "input/". g:acq . "/4.txt"
+  execute 'split' "input/". g:acq . "/3.txt"
+  execute 'split' "input/". g:acq . "/2.txt"
+  execute 'split' "input/". g:acq . "/1.txt"
+  vertical resize -80
+  execute "normal \<C-W>l"
+  cal cursor(72, 2)
   normal zz
 endfunction
 :nnoremap <C-Q> :!make Q=<C-r>=g:acq<CR><CR>
