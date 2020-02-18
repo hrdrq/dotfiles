@@ -20,7 +20,7 @@ function! Set_ac_env(quiz)
   execute 'split' "input/". g:acq . "/1.txt"
   vertical resize -80
   execute "normal \<C-W>l"
-  cal cursor(72, 2)
+  cal cursor(78, 2)
   normal zz
 endfunction
 :nnoremap <C-Q> :!make Q=<C-r>=g:acq<CR><CR>
