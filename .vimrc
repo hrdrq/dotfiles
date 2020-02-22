@@ -18,7 +18,7 @@ function! Set_ac_env(quiz)
   execute 'split' "input/". g:acq . "/3.txt"
   execute 'split' "input/". g:acq . "/2.txt"
   execute 'split' "input/". g:acq . "/1.txt"
-  vertical resize -80
+  vertical resize -70
   execute "normal \<C-W>l"
   cal cursor(78, 2)
   normal zz
@@ -76,6 +76,7 @@ let g:deoplete#enable_at_startup = 1
 Plug 'mattn/emmet-vim'
 let g:user_emmet_leader_key='<c-t>'
 Plug 'posva/vim-vue'
+Plug 'cakebaker/scss-syntax.vim'
 call plug#end()
 if has("gui_running")
   colorscheme twilight
